@@ -24,13 +24,15 @@ titleInput.on('keyup', enableBtn)
 
 $('.deleteReadBtn').click(function(){
   $('.read').remove();
+  readCounter();
+  $('.card-counter').html($('.bookmark-card').length);
 });
 
 function readEventListener(btnClass) {
   $("." + btnClass).click(function(){
     $("." + btnClass).toggleClass('read');
     $("." + btnClass).parent().toggleClass('read');
-    readCounter()
+    readCounter();
   })
 }
 
@@ -49,7 +51,7 @@ function createNewCard() {
     cardId = cardId + 1
     e.preventDefault();
     inputMissing();
-
+    
     //when 'enter' is clicked
     // grab value of the title box and call it title
     var title = $('.bkm-title').val()
@@ -103,7 +105,7 @@ function readCounter() {
 function deleteCard() {
   $(this).parent().remove();
   console.log($('.bookmark-card').length)
-  $('.card-counter').html($('.bookmark-card').length)
+  $('.card-counter').html($('.bookmark-card').length);
 };
 
 function validateURL(value) {
