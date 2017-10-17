@@ -11,6 +11,7 @@ var titleInput = $('.bkm-title');
 var urlInput = $('.bkm-url');
 var cardId = 0;
 
+
 function disableBtn() {
   $('.create-bkm').removeClass('enabled-btn').addClass('disabled-btn').attr('disabled', true);
 }
@@ -21,6 +22,9 @@ function enableBtn() {
 
 titleInput.on('keyup', enableBtn)
 
+$('.deleteReadBtn').click(function(){
+  $('.read').remove();
+});
 
 function readEventListener(btnClass) {
   $("." + btnClass).click(function(){
