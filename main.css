@@ -334,4 +334,6 @@ a {
   border: none;
   font-size: .8em;
 }
+
+.create-bkm:disabled {
 }
