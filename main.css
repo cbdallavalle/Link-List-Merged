@@ -1,10 +1,171 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 950px) {
   /* For mobile phones: */
+html {
+  height: 100%;
+}
 
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+section {
+  display: inline-block;
+  width: 100%;
+  font-family: Open Sans;
+}
+
+.errorDisplay {
+  font-family: Open Sans;
+  color: #af0808;
+  background-color: #e54242;
+}
+
+.column1 {
+  text-align: center;
+  background-color: #455A64;
+  vertical-align: middle;
+}
+
+.column2 {
+  background-color: #CFD8DC;
+  overflow-y: auto;
+  height: 100%;
+}
+
+article {
+  display: block;
+  background-color: #FFFFFF;
+  border: .1em solid #607D8B;
+  margin: 1em;
+  padding: 1em;
+  /*text-align: center;*/
+}
+
+h1 {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 2.1em;
+  margin: 0em;
+}
+
+h2 {
+  color: #455A64;
+  font-weight: 800;
+}
+
+hr {
+  height: .1em;
+  border: none;
+  background-color: #CFD8DC;
+}
+
+header {
+  margin-top: 1em;
+}
+
+
+span {
+  display: inline-block;
+  width: 1.6em;
+  height: auto;
+}
+
+input {
+  width: 11.3em;
+  height: 1.4em;
+  font-size: 2.3em;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  font-family: Open Sans;
+  font-weight: 400;
+  color: #607D8B;
+  text-decoration-color: #F2F2F4;
+}
+
+.read-btn, .delete {
+  border: none;
+  background-color: #FFFFFF;
+  color: #455A64;
+  margin-bottom: .5em;
+  text-decoration: underline;
+  text-decoration-color: #F2F2F4;
+  font-size: 12px;
+}
+
+.delete {
+  float: right;
+  margin-right: 10px;
+}
+
+ a:hover{
+  font-weight: 800;
+  text-decoration-color: #FFC107;
+}
+
+.bkm-title {
+  margin: .3em 0em .3em 0em;
+}
+
+.bkm-url {
+  margin-bottom: .2em;
+}
+
+.create-bkm {
+  width: 33em;
+  height: 4em;
+  background-color: #FFC107;
+  color: #FFFFFF;
+  border: none;
+  font-size: .8em;
+  margin-bottom: 1.1em;
+}
+
+::placeholder {
+  color: #d4d6d8;
+  font-weight: 400;
+  box-shadow: 2px #d4d6d8;
+}
+
+.bookmarkCount {
+  right: 0;
+  top: 0;
+  left: 0;
+  /*border: 2px solid #455A64;*/
+  width: 100%;
+  text-align: center;
+  height: 3em;
+  padding: 1em 0em;
+  background-color: #F2F4F4;
+  box-shadow: inset 0em 0em 0em .2em #d4d6d8;
+
+}
+
+.deleteReadBtn {
+  background-color: #455A64;
+  color: #FFFFFF;
+  border: none;
+  font-size: .8em;
+  padding: .5em;
+  margin-left: 1em;
+}
+
+.numberOfUnread, .numberOfBkms, .deleteReadBtn {
+  display: inline-block;
+}
+
+.numberOfUnread, .numberOfBkms {
+  color: #607D8B;
+  margin-left: 1em;
+}
 
 } /*END OF MOBILE PHONE SCREEN MEDIA QUERY*/
-
-
 
 .read {
   color: #F05A28 !important;
@@ -13,8 +174,37 @@
  /*create a mobile display*/
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 950px) {
   /* For desktop: */
+
+.bookmarkCount {
+  /*position: absolute;*/
+  display: block;
+  right: 0;
+  top: 0;
+  left: 0;
+  /*border: 2px solid #455A64;*/
+  width: 100%;
+  text-align: center;
+  height: 3em;
+  padding: 1em 0em;
+  background-color: #F2F4F4;
+  box-shadow: inset 0em 0em 0em .2em #d4d6d8;
+
+}
+
+.deleteReadBtn {
+  background-color: #455A64;
+  color: #FFFFFF;
+  border: none;
+  font-size: .8em;
+  padding: .5em;
+  margin-left: 1em;
+}
+
+button {
+  cursor: pointer;
+}
 
 body {
   margin: 0;
@@ -23,8 +213,17 @@ body {
 section {
   display: inline-block;
   width: 50%;
-  height: 44em;
+  height: 100vh;
   font-family: Open Sans;
+}
+
+.numberOfUnread, .numberOfBkms, .deleteReadBtn {
+  display: inline-block;
+}
+
+.numberOfUnread, .numberOfBkms {
+  color: #607D8B;
+  margin-left: 1em;
 }
 
 .errorDisplay {
@@ -43,6 +242,7 @@ section {
   float: right;
   background-color: #CFD8DC;
   overflow: auto;
+  position: relative;
 }
 
 article {
@@ -50,13 +250,15 @@ article {
   background-color: #FFFFFF;
   border: .1em solid #607D8B;
   margin: 1em;
+  padding: 1em;
+  position: relative;
   /*text-align: center;*/
 }
 
 h1 {
   color: #FFFFFF;
   font-weight: bold;
-  font-size: 2.9em;
+  font-size: 3.5em;
 }
 
 h2 {
@@ -65,7 +267,6 @@ h2 {
 }
 
 hr {
-  width: 38em;
   height: .1em;
   border: none;
   background-color: #CFD8DC;
@@ -83,13 +284,9 @@ span {
 }
 
 input {
-  width: 17em;
+  width: 20em;
   height: 1.3em;
   font-size: 1.3em;
-}
-
-a, h2, .read-btn {
-  margin-left: 20px;
 }
 
 a {
@@ -128,10 +325,11 @@ a {
 }
 
 .create-bkm {
-  width: 28.1em;
+  width: 33em;
   height: 2em;
   background-color: #FFC107;
   color: #FFFFFF;
   border: none;
   font-size: .8em;
+}
 }

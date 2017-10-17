@@ -9,6 +9,9 @@ var urlInput = $('.bkm-url');
 
 var cardId = 0;
 
+$('.deleteReadBtn').click(function(){
+  $('.read').remove();
+});
 
 function readEventListener(btnClass) {
   $("." + btnClass).click(function(){
