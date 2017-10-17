@@ -51,7 +51,7 @@ h1 {
 }
 
 h2 {
-  color: #455A64;
+  color: #607D8B;
   font-weight: 800;
 }
 
@@ -109,6 +109,15 @@ a {
   text-decoration-color: #FFC107;
 }
 
+.read-btn:hover{
+  font-weight:800;
+  text-decoration-color: #FFC107;
+}
+
+.create-bkm:hover{
+  background-color: #FFD773;
+}
+
 .bkm-title {
   margin: .3em 0em .3em 0em;
 }
@@ -142,6 +151,7 @@ a {
   text-align: center;
   height: 3em;
   padding: 1em 0em;
+  padding-bottom: 2em;
   background-color: #F2F4F4;
   box-shadow: inset 0em 0em 0em .2em #d4d6d8;
 
@@ -156,11 +166,11 @@ a {
   margin-left: 1em;
 }
 
-.numberOfUnread, .numberOfBkms, .deleteReadBtn {
+h2, .deleteReadBtn {
   display: inline-block;
 }
 
-.numberOfUnread, .numberOfBkms {
+h2 {
   color: #607D8B;
   margin-left: 1em;
 }
@@ -178,7 +188,7 @@ a {
   /* For desktop: */
 
 .bookmarkCount {
-  /*position: absolute;*/
+  position: relative;
   display: block;
   right: 0;
   top: 0;
@@ -188,6 +198,7 @@ a {
   text-align: center;
   height: 3em;
   padding: 1em 0em;
+  padding-bottom: 2em;
   background-color: #F2F4F4;
   box-shadow: inset 0em 0em 0em .2em #d4d6d8;
 
@@ -217,11 +228,11 @@ section {
   font-family: Open Sans;
 }
 
-.numberOfUnread, .numberOfBkms, .deleteReadBtn {
+.bkm-bar, .deleteReadBtn {
   display: inline-block;
 }
 
-.numberOfUnread, .numberOfBkms {
+.bkm-bar {
   color: #607D8B;
   margin-left: 1em;
 }
@@ -318,6 +329,15 @@ a {
   text-decoration-color: #FFC107;
 }
 
+.read-btn:hover{
+  font-weight: 800;
+  text-decoration-color: #FFC107;
+}
+
+.create-bkm:hover{
+  background-color: #FFD773;
+}
+
 .bkm-title {
   margin: 1.1em 0em 1.1em 0em;
 }
@@ -336,4 +356,5 @@ a {
 }
 
 .create-bkm:disabled {
+  background-color: #CFD8DC;
 }
