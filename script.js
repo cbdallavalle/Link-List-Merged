@@ -21,6 +21,7 @@ function enableBtn() {
 }
 
 titleInput.on('keyup', enableBtn)
+urlInput.on('keyup', enableBtn)
 
 $('.deleteReadBtn').click(function(){
   $('.read').remove();
@@ -37,13 +38,6 @@ function readEventListener(btnClass) {
 }
 
 var linkCount = document.links.length;
-// console.log(linkCount);
-
-// var count = 0;
-// for (var i = 0; i < document.links.length; i++) {
-//   count++;
-// }
-//   console.log(count);
 
 
 function createNewCard() {
@@ -66,19 +60,19 @@ function createNewCard() {
 function inputMissing() { 
   var errorDisplay = $('.errorDisplay');
   if (titleInput.val().length === 0 && urlInput.val().length === 0) {
-    disableBtn();
-    return;
-  }
-  else if (validateURL(urlInput.val()) === false) {
-    errorDisplay.text('Not a valid URL');
-  }
-  else if (titleInput.val().length === 0) {
-    errorDisplay.text('Missing Website Title');
+    // disableBtn();
     return;
   }
   else if (urlInput.val().length === 0) {
     errorDisplay.text('Missing Website URL');
     return;
+  }
+  else if (titleInput.val().length === 0) {
+    errorDisplay.text('Missing Website Title');
+    return;
+  }
+  else if (validateURL(urlInput.val()) === false) {
+    errorDisplay.text('Not a valid URL');
   }
   else {
     errorDisplay.text('');
@@ -99,7 +93,6 @@ function bkmCounter() {
 
 function readCounter() {
   $('.read-counter').html($('article.read').length) 
-
 }   
 
 function deleteCard() {
