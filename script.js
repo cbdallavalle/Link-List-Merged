@@ -11,7 +11,6 @@ var titleInput = $('.bkm-title');
 var urlInput = $('.bkm-url');
 var cardId = 0;
 
-
 function disableBtn() {
   $('.create-bkm').removeClass('enabled-btn').addClass('disabled-btn').attr('disabled', true);
 }
@@ -39,13 +38,14 @@ function readEventListener(btnClass) {
 
 var linkCount = document.links.length;
 
-
 function createNewCard() {
   $('.create-bkm').click(function(e){
     cardId = cardId + 1
     e.preventDefault();
     inputMissing();
     $('.bkm-title, .bkm-url').val('');
+    $('.bkm-title, .bkm-url').prop('disabled', true);
+    $('.bkm-title, .bkm-url').prop('disabled', false);
     disableBtn();
     
     //when 'enter' is clicked
