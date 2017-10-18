@@ -45,6 +45,8 @@ function createNewCard() {
     cardId = cardId + 1
     e.preventDefault();
     inputMissing();
+    $('.bkm-title, .bkm-url').val('');
+    disableBtn();
     
     //when 'enter' is clicked
     // grab value of the title box and call it title
@@ -60,7 +62,7 @@ function createNewCard() {
 function inputMissing() { 
   var errorDisplay = $('.errorDisplay');
   if (titleInput.val().length === 0 && urlInput.val().length === 0) {
-    // disableBtn();
+    disableBtn();
     return;
   }
   else if (urlInput.val().length === 0) {
@@ -93,7 +95,7 @@ function bkmCounter() {
 
 function readCounter() {
   $('.read-counter').html($('article.read').length) 
-}   
+}
 
 function deleteCard() {
   $(this).parent().remove();
