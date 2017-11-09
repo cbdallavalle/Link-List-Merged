@@ -1,0 +1,2 @@
+# Link-List-Merged
+In this project I paired with one other person: criteriamor. We completed a very successful DTR in the beginning of our project that really helped guide us through our project. This was the first time I had used jQuery, which criteriamor had already been using for the last project, so this was the perfect situation and project to help introduce me to jQuery. Our goal was to have a two inputs for a title and a body on one half of the page (in desktop view) and on the other half of the page, a column for cards to be created with that information. 
